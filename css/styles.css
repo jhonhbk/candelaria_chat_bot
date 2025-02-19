@@ -1,0 +1,435 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(24, 3, 100, 0.432);
+    height: 80px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* Contenedor del navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+}
+
+/* Logo y nombre */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    margin-right: 8px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-menu-item {
+    margin-left: 20px;
+}
+
+.nav-menu-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 6px 10px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+/* Usuario */
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: 15px;
+}
+
+/* Dropdown del usuario */
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    width: 120px;
+    text-align: center;
+}
+
+.user-dropdown a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.user-dropdown a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mostrar el menú cuando el usuario pasa el mouse */
+.user-menu:hover .user-dropdown {
+    display: block;
+}
+
+/* Menú responsive */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-menu {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: rgba(13, 15, 26, 0.9);
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+        transition: height 0.3s ease-in-out;
+    }
+    .nav-menu.active {
+        height: auto;
+        padding: 20px 0;
+    }
+    .nav-menu-item {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Hero Section */
+/* Estilos generales */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(8, 18, 165, 0.623), rgba(165, 9, 9, 0.9)),
+                url('../imagenes/fondo1.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 20px;
+    flex-direction: row; /* Coloca los elementos en fila */
+    gap: 20px;
+}
+
+/* Contenedor del logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img-portada {
+    width: 300px; /* Ajusta el tamaño según lo necesites */
+    height: auto; /* Mantiene la proporción */
+    max-width: 100%;
+}
+
+/* Contenido del Hero */
+.hero-content {
+    text-align: left;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Sección de contenido */
+.content {
+    padding: 100px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        flex-direction: column; /* Cambia a columna en dispositivos móviles */
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+
+    .logo-img-portada {
+        padding-top: 40px;
+        width: 150px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos generales */
+.content-libros {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.content-libros h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Contenedor de libros */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+    .book-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+.book {
+    background: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+.book-img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.book h3 {
+    font-size: 15px;
+    margin: 8px 0 4px;
+    color: #222;
+}
+
+.book p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.book a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.book a:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+/* Footer */
+
+footer {
+    background: #050114;
+    padding: 40px 20px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en dispositivos pequeños */
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.content-foo {
+    text-align: center;
+    flex: 1;
+    min-width: 250px; /* Asegura que los elementos no se vuelvan demasiado pequeños */
+    max-width: 400px;
+}
+
+.content-foo h4 {
+    color: #fff;
+    border-bottom: 3px solid #050114;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p {
+    color: #ccc;
+}
+
+.titulo-final {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: #9e9797;
+}
+
+.red-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.red-social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #030629;
+    border-radius: 50%;
+    transition: all 300ms ease;
+    font-size: 18px;
+}
+
+.red-social a:hover {
+    color: aqua;
+    background-color: #12123d;
+}
+
+.logo-footer {
+    width: 80px;
+    max-width: 100%;
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;
+        text-align: center;
+        border: none;
+    }
+
+    .content-foo {
+        width: 100%;
+    }
+
+    .titulo-final {
+        font-size: 16px;
+    }
+}
